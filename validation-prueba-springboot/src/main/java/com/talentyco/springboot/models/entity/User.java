@@ -59,7 +59,124 @@ public class User implements Serializable {
     @Max(value = 100_000_000)
     private long sueldo;
 
+    public User() {
+    }
 
+    public User(String nombre, String apellido, String email, String password, String profesion, String nota, String sexo, Date nacimiento, boolean estadoCivil, long sueldo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.password = password;
+        this.profesion = profesion;
+        this.nota = nota;
+        this.sexo = sexo;
+        this.nacimiento = nacimiento;
+        this.estadoCivil = estadoCivil;
+        this.sueldo = sueldo;
+    }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public Date getNacimiento() {
+        return nacimiento;
+    }
+
+    public void setNacimiento(Date nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+
+    public boolean isEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(boolean estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public long getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(long sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", profesion='" + profesion + '\'' +
+                ", nota='" + nota + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", nacimiento=" + nacimiento +
+                ", estadoCivil=" + estadoCivil +
+                ", sueldo=" + sueldo +
+                '}';
+    }
 }
